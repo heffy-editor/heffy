@@ -3,7 +3,7 @@
 This is an experiment. We are building a text editor in Haskell.
 
 *Things we want to keep in mind and eventually implement:*
-- *buffer*: efficient way to represent text with specific a data structure (proably a Rope);
+- *buffer*: efficient way to represent text with specific a data structure (probably a Rope);
 - allows /concurrent/ manipulation of the *buffer* (async);
 - client/server architecture;
 - *heffy-core*: is a library. The editor consists in a program that consumes the library (like XMonad). This will enable customization;
