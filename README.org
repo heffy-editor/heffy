@@ -3,12 +3,35 @@
 This is an experiment. We are building a text editor in Haskell.
 
 *Things we want to keep in mind and eventually implement:*
-- *buffer*: efficient way to represent text with specific a data structure (e.g. rope TODO);
-- allows /concurrent/ manipulation of the *buffer*;
+- *buffer*: efficient way to represent text with specific a data structure (proably a Rope);
+- allows /concurrent/ manipulation of the *buffer* (async);
 - client/server architecture;
 - *heffy-core*: is a library. The editor consists in a program that consumes the library (like XMonad). This will enable customization;
 
-* Steps
-- [ ] Bootstrap the project using nix
-- [ ] Implement buffer using some datastructure and visualize it on screen
+* Steps [1/3]
+** DONE Bootstrap the project using nix
+** TODO Research, pick core dependencies and choose core data structures
+** TODO Implement and test core datastructure
+
+* Resources
+xi-editor is a tool that share a lot of the things we are interested in building, here are some resources to get an oreview of some valuable concepts:
+- Xi: an editor for the next 20 years – Raph Levien: https://www.youtube.com/watch?v=4FbQre9VQLI
+- https://xi-editor.io/docs/crdt.html
+
+Some other miscellaneous resources:  
+- Opinionated Haskell Interoperability: https://github.com/aesiniath/unbeliever#readme
+  - https://hackage.haskell.org/package/core-text-0.3.8.1/docs/Core-Text-Rope.html
+- Operational transformation https://en.wikipedia.org/wiki/Operational_transformation
+- Operational Transformation in Real-Time Group Editors: Issues, Algorithms, and Achievements: [[https://dl.acm.org/doi/pdf/10.1145/289444.289469]]][
+- Lapce: https://github.com/lapce/lapce
+- Kakoune design https://github.com/mawww/kakoune/blob/master/doc/design.asciidoc
+  
+On CRDTs:
+- Understanding CRDTs: A Gentle Introduction: https://federicoterzi.com/blog/understanding-crdts-a-gentle-introduction-chapter-1/ 
+- An introduction to Conflict-Free Replicated Data Types (CRDTs): https://www.youtube.com/watch?v=gZP2VUmH05A
+- CRDTs - Stop Worrying About Write Conflicts | Systems Design 0 to 1 with Ex-Google SWE: https://www.youtube.com/watch?v=FG5Varj1Ows
+- https://crdt.tech/implementations
+- https://github.com/ff-notes/ron
+  - ReactiveConf 2017 - Victor Grishchenko: RON: Replicated Object Notation: https://www.youtube.com/watch?v=0Xx9kkTMi10
+
 

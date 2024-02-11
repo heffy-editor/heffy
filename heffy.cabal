@@ -35,10 +35,10 @@ license:            GPL-3.0-or-later
 license-file:       LICENSE
 
 -- The package author(s).
-author:             Alberto Fanton, Andrea Ciceri
+author:             Andrea Ciceri, Alberto Fanton
 
 -- An email address to which users can send suggestions, bug reports, and patches.
-maintainer:         alberto.fanton@protonmail.com, andrea.ciceri@autistici.org
+maintainer:         andrea.ciceri@autistici.org, alberto.fanton@protonmail.com
 
 -- A copyright notice.
 -- copyright:
@@ -52,7 +52,7 @@ extra-doc-files:    CHANGELOG.md
 -- extra-source-files:
 
 common warnings
-    ghc-options: -Wall
+    ghc-options: -Werror
 
 library
     -- Import common warning flags.
